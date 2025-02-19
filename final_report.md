@@ -87,5 +87,30 @@ $$\boldsymbol{a(0)} = \text{average intra-cluster distance}$$
 $$\boldsymbol{b(0)} = \text{average inter-cluster distance}$$
 
 Once the clustering is finalized a pivot table was created to outline the characteristics of each archetype, highlight each stypes proficiencies and deficiences,
-and lastly examine the number of champions each fighting style has produced, as well as that number's to the total number of fighters in that division over the total champions in that division to gauge the effectiveness of that style. The random seed will be set to the same value across all K-means clustering trials
-to reduce the fluctuation of results across difference sessions.
+and lastly examine the number of champions each fighting style has produced, as well as that number's to the total number of fighters in that division over the total champions in that division to gauge the effectiveness of that style. The random seed will be set to the same value across all K-means clustering trials to reduce the fluctuation of results across difference sessions.
+
+The final clustering groups will act as the fighters assigned style in the proceeding prediciton phase of the analysis. A feature which we hypthesize will improve the accuracy of the trialed models in predicting whether or not a fighter will become a champion
+
+### Champion Prediction Model
+In predicting wheter a fighter will be a champion within their weight class, a logistic regression and a foreset based model were both built. In prepartion for each weight class, the following is the population of fighters in each weight class and number of champions in their respective weight classes.
+
+<p align="center">
+<b>Population and Champion Distribution Per Weight Class</b>
+</p>
+
+<p align="center">
+<img width="392" alt="Screenshot 2025-02-18 at 8 22 11 PM" src="https://github.com/user-attachments/assets/d5848089-3973-4fa3-b5e6-447f09cb8422" />
+</p>
+
+Due to the limited number of champions present in each weight class and teh mixture of gender in the lower weight classes which adds another dimension for later exlploration, our models will
+primarily focus on weight calsses from featherweigh and above.
+
+The table above also shows the class imbalance between champions and non-champions. Oversampling techniques such as Synthetic Minority Oversampling Technique (SMOTE) are also applied to the training data to be able to get more diversity out of a limited data set. By applying oversampling techniques, the training data is augmented to provide more info0rmation on the
+imbalanced class (i.e. champions).
+
+
+
+
+
+
+
