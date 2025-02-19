@@ -61,13 +61,31 @@ The following preprocessing and aggregation steps were taken to combine the data
 
 * **Assigning "Champion" attribute**: The "champion" attribute which acts as the target variable for the prediction model was derived by identifying if a fighter has ever once won a title fight.
 
-The final dataset yields 1,447 uniue fighters with 48 attributes consisting of 45 numerical variables, 2 catergorical variables, and the target variable. There are a total of 119 unique champions in the dataset.
+The final dataset yields 1,447 uniue fighters with 48 attributes consisting of 45 numerical variables, 2 catergorical variables, and the target variable. There are a total of 119 unique champions in the dataset. 
+<br>
+<br>
 
-**Distribution of Fighters by Weight Class**:\
-![image](https://github.com/user-attachments/assets/fbf41e5c-d1e7-48b0-82c8-861c08de40f1)
+<p align="center">
+<b>Distribution of Fighters by Weight Class:</b>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/fbf41e5c-d1e7-48b0-82c8-861c08de40f1" />
+</p>
 
 ## Methodology
 ### K-Means Clustering for Fighting Styles
-In order to derive the fighting styles of each weigh class we utilized the unsupervised learning method of the K-means clustering algorithm, initialzing the model with various numbers of cluserts to find the optimal grouping. The Silhouette Scores of these grouping will help with finding the optimal grouping as such method explores the average distinctiveness of each cluster with the output clustering assignment.\
+In order to derive the fighting styles of each weigh class we utilized the unsupervised learning method of the K-means clustering algorithm, initialzing the model with various numbers of cluserts to find the optimal grouping. The Silhouette Scores of these grouping will help with finding the optimal grouping as such method explores the average distinctiveness of each cluster with the output clustering assignment.
 
-A pivot table was then created to outline the characteristics of each style, highligting each styles proficiences and deficiencies, and lastly examine the number of champions each fighting style has produced, 
+$$\text{Silhouette Coefficient of Data Point(o)} = \frac{b(o)-a(o)}{max[a(o), b(o)]}$$
+$$\boldsymbol{a(0)} = \text{average distance between point(o) and all the other data points within the same cluster}$$
+$$\textbf{b(0)} = \text{minimum average distance between point(o) to all clusters to which it doesn't belong to}$$
+$$\textbf{s(o)} = \text{silhouette coefficient of data point(o)}$$
+
+$$\text{Silhouette Score} = \frac{b-a}{max[a,b]}$$
+$$\boldsymbol{a(0)} = \text{average intra-cluster distance}$$
+$$\boldsymbol{b(0)} = \text{average inter-cluster distance}$$
+
+Once the clustering is finalized a pivot table was created to outline the characteristics of each archetype, highlight each stypes proficiencies and deficiences,
+and lastly examine the number of champions each fighting style has produced, as well as that number's to the total number of fighters in that division over the total champions in that division to gauge the effectiveness of that style. The random seed will be set to the same value across all K-means clustering trials
+to reduce the fluctuation of results across difference sessions.
