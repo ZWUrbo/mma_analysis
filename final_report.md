@@ -108,9 +108,61 @@ primarily focus on weight calsses from featherweigh and above.
 The table above also shows the class imbalance between champions and non-champions. Oversampling techniques such as Synthetic Minority Oversampling Technique (SMOTE) are also applied to the training data to be able to get more diversity out of a limited data set. By applying oversampling techniques, the training data is augmented to provide more info0rmation on the
 imbalanced class (i.e. champions).
 
+The data also went through standardiation, though this may not be necessary for random forest or regression models, there is a benefit of convergence speeds for the regression modesls, so the standardization was implemented. 
+
+In search of the optimal hyperparameters for both the random forest, and logistic regression models, k-fold validation methods were used to train and validate teh iteration of models as the optimal hyperparameters were searched for. The cross validation value is set to 5 and used in a grid search search for the optimal hyperparametes.
+
+Focusing on the logistic regression model, different regularization methods are looked at such as the LASSO, Ridge, and Elastic Net method.  
+
+<p align="center">
+C value: 0.0001, 0.001, 0.01, 0.1, 1.0, 10, 100 <br>
+L1 ratio: 0.0001, 0.001, 0.01, 0.1, 0.2, 0.5, 0.8, 0.99, 1.0
+</p>
+
+The goal of the regularization tuning term, "C", is to correct for overfitting and simplify the model to generalize the predictions better. This is done differently inboth LASSO and Ridge Regression. LASSO penalizes the absolute value of the coefficient and sets irrelevant feature coefficeint values to 0. Ridge penalizes the size of the regression coefficient by the square of the magnitude while not reducing the feeature coefficients to 0.
+
+LASSO can help with feature selection, but is unstable when varaibles are correlated. Ridge on the other hand can handle correlated variables but can not perform feature selection. ElasticNet is the combination of theses two regualarization methods by balancing that ration with the L1 ratio. The following are teh mathematical functions for LASSO, Ridge, and Elastic Net Regression.
+
+<p align="left">
+$$\text{LASSO} = \text{min}\frac{1}{m}\sum_{i=1}^m (y^i - \theta^T \text{x}^i + \lambda $|\theta|_1)$$
+<br>
+$$\text{Ridge} = \text{min}\frac{1}{m}\sum_{i=1}^m (y^i - \theta^T \text{x}^i + \lambda $|\theta|_2^2)$$
+<br>
+$$\text{ElasticNet} = $$
+</p>
+
+## Results and Evaluation
+### Derivation of Fighting Styles
+The exectuion of the K-means clustering was done by weight class nine separate times with the first initalization being made with seven clusters and incrementally increasing to 15. The starting number of seven was chosen in reference to a graphic previously published by ESPN that outlines the top seven winning fighting styles proved by the fighters tehmselves.
+1. Wrestling
+2. Brazilian Jiu-Jitsu
+3. Boxing
+4. Kickboxing
+5. Muay Thai
+6. Taekwondo
+7. Karate
+
+By increasing the number of initialized clusters incrementally, we believe it will allow for the algorithm to discover more distinct fighting styles from the seven listed above. For example, subsets of larger disciplines, like boxing, could potentially be broken down to "Inside/Outside Boxing" with "Inside Boxers" showing a preference for clich strikes to the head and body and "Outside Boxers" showing a preference for outside strikes to the head and body. THis approach allows for the data (i.e. the fighter's actual actions in the fight) to classify their fighting styles as opposed to their self-given label upon entry into the UFC.
+
+Finally, because the K-means clustering algorithm is being used as a mehtod of discovery with no _ground truth labels_, we will utilize the intrinsic method of calculating and comparing the Silhouette Scores of each iteration's clustering assignments to determine the best approximation of the number of distinct fighting styles that exist in each weight class. _Proficiences_, defined as style fight averages higher than 1$$\sigma$$ from the weight class average value and  _Deficiences_, defined as style fight averages less than 1$$\sigma$$ from the weight class average, are obtained to understand the definining characteristics of each style.
+
+#### Featherweight
+![Screenshot 2025-02-26 at 5 05 29 PM](https://github.com/user-attachments/assets/82a1ce72-0fc0-48c5-9702-29f2f35d60ec)
 
 
+The thres clusters accounting for 69.24% of the division's champions were styles 2,5, and 6. Of the three styles, styles 2 and 5 shared proficiences in striking, boasting hihg averages of finishes by knockout or technical knockout. Style 2 learned on the more aggresive side of stricking while Style 5 leaned on the more defensive. Style 6 was the more Brazilian Jiu-Jitsu oriented style of the groups having higher submission attempts and submission victories. Complementary to the Brazilian Jiu-Jitsu style is the groups's deficiency in takedown defense as fighters of thsi discipline are less agaisnt fighting on the ground due to more submission opportunities.
 
+#### Lightweight
+![Screenshot 2025-02-26 at 5 06 16 PM](https://github.com/user-attachments/assets/a1487f80-9157-4c58-ab50-43cfda55ba48)
 
+Themost interesting style in this division is that of style 6 which appears to be very wrestling focused with ground control time more than 3x the division average and ground strikes attempts close to 4x the division aveage. Despite the fighting style's outying nature (only having three fighters of this style), adopting a similar game appears to be highly beneficial, at least in this weight class, because despite there only being one champion in this style group, the group has yet to lose a single fight.
 
+Another style that stands out in the lightweight division is Style 5, accounting for $$\frac{1}{4}$$ of the division's champions with 30.77% of fighters within the style group being champions. Style 5 is very similar to that of Style 2 seen in the featherweight division with prociencies in almost every striking category and having an aggressive style averaging a high number of strikes attempted per fight. However, Style 5 in the lightweight division differs from its counterpart in the featherweight division in the sense that the fighters in this division are also proficient at defense with a preference to fight at a distance. 
 
+#### Welterweight
+
+#### Middleweight
+
+#### Light-Heavyweight
+
+#### Heavyweight
