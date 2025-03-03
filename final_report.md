@@ -188,3 +188,33 @@ Lastly, style 5 has only three proficiencies: strikes attempted per minute. aver
 Styles 1, 4, and 5 account for 66.67% of the champions within the division. Style 1 contains proficiecny in close-quarters clinch striking with fighters having the ability to reverse bad positions on the ground and prevent strikes and thuse damage. Given style 1's higher than average win by decision percentage as well, an assumption can be made that this fighter style tends to minimize risk during the fight by maintaing confrol of their opponent while landing a volume of strikes at close range. As we see power becoming more apparent at these higher weights, this style possibly shows an adaptation made by defensive minded fighters at this weight to address such threats.
 
 Style 4, as often seen in the other weight classes, find it's success with a striking heavy style and a proficient takedown defense to boast in order to keep the fight playing to its strengths. STyle 5, is a submission-oriented style with deficiencies in many striking categories.
+
+### Predicting Champion Model Results
+
+The classification of a fighter in our champion prediction model will be evaluated by determinig if they actually were a champion at one point in time. A definite known fact in the equation of predicting a champion is that a winning record or a high win percentage for a fighter is a must. If we see inconsistencies with the prediction of champion percentages and the fighter's record then we will know that our approach/methodolygy needs improvements. For the final champion prediction model, some metrics that we will be evaluating on are standard classification metrics such as precision, accuracy, f1 score, confusion matrix, etc. 
+
+__Elastic Net Model Results By Weight Class__ <br>
+![Screenshot 2025-03-03 at 2 37 32 PM](https://github.com/user-attachments/assets/1c5a93db-a9a2-4e74-baf1-6fd938ce2afc)
+<br>
+__Random Forest Model By Weight Class__ <br>
+![Screenshot 2025-03-03 at 2 38 42 PM](https://github.com/user-attachments/assets/086261b1-27f2-4130-93b0-dbef0ccd2a5c)
+
+Upon exmaining the prediction performance of the Champion Class ("1"), the Elstic Net Regression Model seems to perform better than the Random Forsest models for most of the weight classes. The results also show that ElasticNet models tend to have trouble with precision, more than recall when comparing the two metrics side-by-side. DUe to the small data size for each weight class, along with the small champion population within each class, the metrics are a bit difficult to interpret when the confusion matrix shows the counts are so low. Most weight classes only have 2-5 champions
+
+### Analysis of Prediction Model | Logistic Regression
+
+Focusing on the ElasticNet model results, it's seen that certain weight classes perform better than others such as Middleweight and Heavyweight. Taking a look into the coefficients as a proxy for feature importance, we can see which features are contributing to the champion predictions best. <br>
+
+![Screenshot 2025-03-03 at 2 45 41 PM](https://github.com/user-attachments/assets/6303bae9-870a-46b7-9a33-0d1676778dcc) <br>
+![Screenshot 2025-03-03 at 2 46 13 PM](https://github.com/user-attachments/assets/9c31f0a4-35fa-4d18-ad76-af590f43163a) <br>
+
+As these feature coefficients contribute to the prediciton of a champion, they seem to make sense as the top feature in each weight class is the "total_title_bouts" feature. Other featuers also make sense such as "max_win_streak", "wins", "avg_min_streak". Other interesting features theat tend to show up across all of the weight calsses are "Clinch_percentage", suggesting champmions or winners in general may engage in clinches more often. It can also be observed with smaller fighters, the fights are not determined by a heavy blow and could be a battle of attrition.
+
+Focusing on the lightweight class, we can see that the cluster group fighting styles 2, 8, and 9 appear as the top features in predicting champions. Wehn comparing this with the cluster analysis, this doesn't seem to be a strong indicator of champions in comparision to other fight styles. The cluster analysis shows fighting styles 5 and 6 to be strong indicators of a champion. This mismatch may suggest that the fighting styles may not directly serve as a strong feature in prediction a champion, but that it is used as a proxy with other features
+
+
+
+
+
+
+
