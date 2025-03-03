@@ -155,14 +155,36 @@ The thres clusters accounting for 69.24% of the division's champions were styles
 #### Lightweight
 ![Screenshot 2025-02-26 at 5 06 16 PM](https://github.com/user-attachments/assets/a1487f80-9157-4c58-ab50-43cfda55ba48)
 
-Themost interesting style in this division is that of style 6 which appears to be very wrestling focused with ground control time more than 3x the division average and ground strikes attempts close to 4x the division aveage. Despite the fighting style's outying nature (only having three fighters of this style), adopting a similar game appears to be highly beneficial, at least in this weight class, because despite there only being one champion in this style group, the group has yet to lose a single fight.
+The most interesting style in this division is that of style 6 which appears to be very wrestling focused with ground control time more than 3x the division average and ground strikes attempts close to 4x the division aveage. Despite the fighting style's outying nature (only having three fighters of this style), adopting a similar game appears to be highly beneficial, at least in this weight class, because despite there only being one champion in this style group, the group has yet to lose a single fight.
 
 Another style that stands out in the lightweight division is Style 5, accounting for $$\frac{1}{4}$$ of the division's champions with 30.77% of fighters within the style group being champions. Style 5 is very similar to that of Style 2 seen in the featherweight division with prociencies in almost every striking category and having an aggressive style averaging a high number of strikes attempted per fight. However, Style 5 in the lightweight division differs from its counterpart in the featherweight division in the sense that the fighters in this division are also proficient at defense with a preference to fight at a distance. 
 
 #### Welterweight
+![Screenshot 2025-03-03 at 2 10 27 PM](https://github.com/user-attachments/assets/72dff9d6-f445-46e1-b736-f2d7b9b84a2b)
+
+An outlier of an observation, something that is not seen in any other weight division explored here, is a style consisting of only one fighter. This one fighter, Kamaru Usman, is the division's current undefeated champion and is currently ranked as the #1 pound-for-pound figher. His averages show that he's essentially proficient at almost all striking and grappling categories, with an aversion to submissions and leg strikes. A cluster of just one fighter provides evidence that the current champion may just be on another level.
+
+On the other hand, a more obtainable style to replicate in this division is that of Style 3. With only nine fighers of this style, three being champions, this style focuses on a volume heavy striking approach at adistance while, unlike the other styles in this division, also remainin focused on leg attacks. 
 
 #### Middleweight
+![Screenshot 2025-03-03 at 2 15 51 PM](https://github.com/user-attachments/assets/c94316fb-bc66-4570-9397-95432b3f35ce)
+
+The middleweight division, unlike other divisions, has 5 out of the 12 styles with at least 20% of the fighres in each style being champions. However, these five styles only account for 25.16% of the fighters in the division, indicating these are pretty niche styles. Of the styles, Styles 0,2, and 9 are striking focused with very similar proficiencies. 
+
+Style 3, another one of the five styles, hasaverage ratings across the board but shows a proficiency in the number of knockdowns they are able to score per fight. This gives an indication that at these higher weight classes simply being strong can make up for skill. Finally, style 5, teh remaining style of the five, is very wrestling heavy. Of these styles, style 2 is the most efficient with 37.50% of the fighters of this style being champions
 
 #### Light-Heavyweight
+![Screenshot 2025-03-03 at 2 19 35 PM](https://github.com/user-attachments/assets/08aecbbe-0f3a-45b4-963f-32b116701f47)
+
+Styles 1, 2, and 5 in the light-heavyweight division make up 81.81% of the champions in the division and account for 62.70% of all the fighters in the division. Style 1 has the highest percentage of their fighters as champions at 21.43% and unlike the other weight divisions this style is submission oriented with proficiencies in only striking defense, takedown accuracy, and submission attempts.
+
+Style 2 of this division is the only style across weight classes that is average at everything, having no proficiences or deficiencies. Such results may sign that simple well-rounded style is suitable at this weight. 
+
+Lastly, style 5 has only three proficiencies: strikes attempted per minute. average knockdowns per fight, and wins by KO/TKO%; with 6 deficiencies in the close-quarters fighting categories (takedowns, clinch, ground). FOllowing the trend seen at middleweight, strength and knockout power appearing almost enough to win a fight.
 
 #### Heavyweight
+![Screenshot 2025-03-03 at 2 23 37 PM](https://github.com/user-attachments/assets/11ffd7fa-23d0-4f38-a6ff-ca654d6cbcd6)
+
+Styles 1, 4, and 5 account for 66.67% of the champions within the division. Style 1 contains proficiecny in close-quarters clinch striking with fighters having the ability to reverse bad positions on the ground and prevent strikes and thuse damage. Given style 1's higher than average win by decision percentage as well, an assumption can be made that this fighter style tends to minimize risk during the fight by maintaing confrol of their opponent while landing a volume of strikes at close range. As we see power becoming more apparent at these higher weights, this style possibly shows an adaptation made by defensive minded fighters at this weight to address such threats.
+
+Style 4, as often seen in the other weight classes, find it's success with a striking heavy style and a proficient takedown defense to boast in order to keep the fight playing to its strengths. STyle 5, is a submission-oriented style with deficiencies in many striking categories.
