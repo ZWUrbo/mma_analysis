@@ -212,9 +212,9 @@ As these feature coefficients contribute to the prediciton of a champion, they s
 
 Focusing on the lightweight class, we can see that the cluster group fighting styles 2, 8, and 9 appear as the top features in predicting champions. Wehn comparing this with the cluster analysis, this doesn't seem to be a strong indicator of champions in comparision to other fight styles. The cluster analysis shows fighting styles 5 and 6 to be strong indicators of a champion. This mismatch may suggest that the fighting styles may not directly serve as a strong feature in prediction a champion, but that it is used as a proxy with other features
 
+## Conclusion
 
-
-
+The cluster analysis on fighting styles for each weight class provides useful insights on what type of fighers there are in each weight class.
 
 
 
